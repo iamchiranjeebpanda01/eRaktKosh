@@ -23,6 +23,12 @@ Health Care Services
 
 Mainly, there are three actors in the application who can directly interact with it. Each role has specific functionalities and permissions within the system, ensuring efficient management and utilization of the blood bank resources.
 
+## Technologies Used
+The eRaktKosh Blood Bank Management System is built using the following technologies:
+- **Programming Language**: TypeScript
+- **Backend**: Node.js
+- **Frontend**: React.js
+- **Database**: MongoDB
 
 
 
