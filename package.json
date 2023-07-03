@@ -9,6 +9,6 @@
   "start-frontend": "cd src/frontend && npm start"
 },
   "keywords": [],
-  "author": "",
+  "author": "Chiranjeeb Panda",
   "license": "ISC"
 }
