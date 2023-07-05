@@ -7,7 +7,5 @@ const express_1 = __importDefault(require("express"));
 const establishConnection_1 = require("./database/establishConnection");
 const app = (0, express_1.default)();
 (0, establishConnection_1.connectToDatabase)().then(() => {
-    app.listen(8000, () => {
-        console.log("Listening on port 8000");
-    });
+    app.listen(8000);
 });
