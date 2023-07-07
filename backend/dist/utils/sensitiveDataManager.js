@@ -11,6 +11,6 @@ const encryptData = (data) => {
 };
 exports.encryptData = encryptData;
 const decryptData = (encryptedData) => {
-    return crypto_js_1.default.AES.decrypt(encryptedData, password).toString();
+    return crypto_js_1.default.AES.decrypt(encryptedData, password).toString(crypto_js_1.default.enc.Utf8);
 };
 exports.decryptData = decryptData;
