@@ -11,5 +11,8 @@ app.use(cors());
 
 //* Server Port Definition
 connectToDatabase().then(() => {
-    app.listen(8000);
+    let port = 8000;
+    app.listen(port, () => {
+        console.log(`Listening to server on port ${port}`)
+    });
 })

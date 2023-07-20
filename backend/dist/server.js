@@ -13,5 +13,8 @@ app.use(body_parser_1.default.json());
 app.use((0, cors_1.default)());
 //* Server Port Definition
 (0, establishConnection_1.connectToDatabase)().then(() => {
-    app.listen(8000);
+    let port = 8000;
+    app.listen(port, () => {
+        console.log(`Listening to server on port ${port}`);
+    });
 });
