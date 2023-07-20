@@ -1,4 +1,5 @@
 import mongoose, { Date } from "mongoose";
+import { IBloodGroup, bloodGroupSchema } from "./BloodGroup";
 
 export interface IBloodBank extends mongoose.Document{
     username: string;
@@ -7,7 +8,9 @@ export interface IBloodBank extends mongoose.Document{
     parent_hospital: string;
     category: string;
     lastUpdated: Date;
-    BloodGroups: []
+    BloodGroups: IBloodGroup[];
+    district: mongoose.Types.ObjectId;
+    state: mongoose.Types.ObjectId;
 }
 
 const Schema = mongoose.Schema;
@@ -18,8 +21,10 @@ export const bloodBankSchema = new Schema<IBloodBank>({
     name: {type: String, required:true},
     parent_hospital: String,
     category: String,
-    lastUpdated: {type: Date},
-    BloodGroups: [{type: Schema.Types.ObjectId, ref: "Blood Group"}]
+    lastUpdated: Date,
+    BloodGroups: [bloodGroupSchema],
+    district: {type: Schema.Types.ObjectId, ref:"District"},
+    state: {type: Schema.Types.ObjectId, ref:"State"}
 });
 
 const BloodBank = mongoose.model<IBloodBank>("Blood Bank", bloodBankSchema);

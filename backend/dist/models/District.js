@@ -10,7 +10,7 @@ const Schema = mongoose_1.default.Schema;
 exports.districtSchema = new Schema({
     name: { type: String, required: true },
     bloodbanks: [BloodBank_1.bloodBankSchema],
-    donors: [{ type: Schema.Types.ObjectId, ref: "Blood Bank" }]
+    donors: [{ type: Schema.Types.ObjectId, ref: "Donor" }]
 });
 const District = mongoose_1.default.model("District", exports.districtSchema);
 exports.default = District;
