@@ -7,7 +7,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const District_1 = require("./District");
 const Schema = mongoose_1.default.Schema;
 const stateSchema = new Schema({
-    name: { type: String, required: true },
+    name: { type: String, required: true, unique: true },
     districts: [District_1.districtSchema]
 });
 const State = mongoose_1.default.model("State", stateSchema);

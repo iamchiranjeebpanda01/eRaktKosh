@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { IBloodGroupDetails } from "./BloodGroupDetails";
 
 export interface IBloodGroup extends mongoose.Document{
     name: string;
