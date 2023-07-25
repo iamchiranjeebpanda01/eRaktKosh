@@ -15,9 +15,9 @@ export interface IBloodBank extends mongoose.Document{
 const Schema = mongoose.Schema;
 
 export const bloodBankSchema = new Schema<IBloodBank>({
-    username: String,
-    password: String,
-    name: {type: String, required:true},
+    username: {type:String, required:true, unique:true},
+    password: {type: String, required: true},
+    name: String,
     parent_hospital: String,
     category: String,
     lastUpdated: Date,

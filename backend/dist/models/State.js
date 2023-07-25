@@ -4,12 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const District_1 = require("./District");
 const Schema = mongoose_1.default.Schema;
 const stateSchema = new Schema({
     name: { type: String, required: true, unique: true },
-    districts: [District_1.districtSchema]
+    districts: [{ type: Schema.Types.ObjectId, ref: "District" }]
 });
 const State = mongoose_1.default.model("State", stateSchema);
-State.collection.createIndex({ "districts.name": 1 });
 exports.default = State;
