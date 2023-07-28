@@ -15,11 +15,7 @@ Health Care Services
 
 - **Blood Banks**: Blood banks can register within the application, providing their location information. They can manage their records, such as the availability of blood, and update it according to the location.
 
-- **Hospitals**: Hospitals can register and log in based on their location. They can add, delete, and update their records, including the availability of blood, according to the location.
-
 - **Blood Donors**: Blood donors can log in and register in the application. They can add all the relevant details, including their location, to their profile.
-
-- **Users**: Users of the application can search for blood based on the location. They can utilize the platform to find suitable blood donors in their area.
 
 Mainly, there are three actors in the application who can directly interact with it. Each role has specific functionalities and permissions within the system, ensuring efficient management and utilization of the blood bank resources.
 
