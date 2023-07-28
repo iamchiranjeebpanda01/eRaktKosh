@@ -13,7 +13,7 @@ exports.bloodBankSchema = new Schema({
     parent_hospital: String,
     category: String,
     lastUpdated: Date,
-    BloodGroups: [{ type: Schema.Types.ObjectId, ref: "Blood Group" }],
+    BloodGroups: [{ type: Schema.Types.ObjectId, ref: "Blood Group", quantity: Number }],
     district: { type: Schema.Types.ObjectId, ref: "District" },
     state: { type: Schema.Types.ObjectId, ref: "State" }
 });

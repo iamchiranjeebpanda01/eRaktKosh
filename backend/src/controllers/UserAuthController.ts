@@ -43,7 +43,7 @@ export const signUp = (req:any, res:any) => {
     newUser.save();
 
     const token = jwt.sign({username: newUser.username}, secretKey, {expiresIn: "1h"});
-    res.status(200).json({token: token, userId: newUser._id.toString()});
+    res.status(201).json({token: token, userId: newUser._id.toString()});
 }
 
 

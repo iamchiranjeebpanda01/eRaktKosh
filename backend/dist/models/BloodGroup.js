@@ -8,8 +8,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const Schema = mongoose_1.default.Schema;
 exports.bloodGroupSchema = new Schema({
     name: String,
-    details: { type: Schema.Types.ObjectId, ref: "Blood Group Details" },
-    quantity: Number
+    details: { type: Schema.Types.ObjectId, ref: "Blood Group Details" }
 });
 const BloodGroup = mongoose_1.default.model("Blood Group", exports.bloodGroupSchema);
 exports.default = BloodGroup;
